@@ -52,7 +52,7 @@ function blackout_mode_template_redirect() {
             if ($options['logo']) {
                 echo '<img src="' . esc_url($options['logo']) . '" alt="Site Logo">';
             }
-            echo '<div class="blackout-text">' . wp_kses_post($options['custom_text']) . '</div>';
+            echo '<div class="blackout-text">' . wp_kses_post(wpautop($options['custom_text'])) . '</div>';
             echo '</div>';
             exit;
         }
